@@ -27,4 +27,12 @@ export class AppComponent {
     quotation.votes += value;
   }
 
+  bestQuotes() {
+    return this.quotes.filter(c => c.votes > 0);
+  }
+
+  worstQuotes() {
+    return this.quotes.filter(c => c.votes < 0);
+  }
+
 }
