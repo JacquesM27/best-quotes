@@ -9,19 +9,12 @@ import { Quotation } from './models/quotation';
 })
 export class AppComponent {
   title = 'best-quotes';
-  showForm = false;
+  
   quotes: Quotation[] = QUOTES;
-  quotation: Quotation = { author: '', sentence: '', votes: 0};
+  
 
 
-  onSwitchForm(): void {
-    this.showForm = !this.showForm;
-  }
-
-  addQuotation() {
-    this.quotes.unshift(this.quotation);//unshift służy do dodania element na początek tablicy
-    this.quotation = { author: '', sentence: '', votes: 0};
-  }
+  
 
   addVote(quotation: Quotation, value: number) {
     quotation.votes += value;
@@ -33,6 +26,10 @@ export class AppComponent {
 
   worstQuotes() {
     return this.quotes.filter(c => c.votes < 0);
+  }
+
+  onNewQuotation(quotation: Quotation) {
+    this.quotes.unshift(quotation);
   }
 
 }
