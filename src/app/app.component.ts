@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'best-quotes';
+  showForm = false;
+
+
+  onSwitchForm(): void {
+    this.showForm = !this.showForm;
+  }
 }
