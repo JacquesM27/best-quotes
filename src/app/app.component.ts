@@ -11,9 +11,15 @@ export class AppComponent {
   title = 'best-quotes';
   showForm = false;
   quotes: Quotation[] = QUOTES;
+  quotation: Quotation = { author: '', sentence: '', votes: 0};
 
 
   onSwitchForm(): void {
     this.showForm = !this.showForm;
+  }
+
+  addQuotation() {
+    this.quotes.unshift(this.quotation);//unshift służy do dodania element na początek tablicy
+    this.quotation = { author: '', sentence: '', votes: 0};
   }
 }
