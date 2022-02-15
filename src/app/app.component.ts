@@ -22,4 +22,9 @@ export class AppComponent {
     this.quotes.unshift(this.quotation);//unshift służy do dodania element na początek tablicy
     this.quotation = { author: '', sentence: '', votes: 0};
   }
+
+  addVote(quotation: Quotation, value: number) {
+    quotation.votes += value;
+  }
+
 }
