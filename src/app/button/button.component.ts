@@ -3,12 +3,10 @@ import { Component, Output, EventEmitter, Input } from '@angular/core';
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html',
-  styleUrls: ['./button.component.css']
+  styleUrls: ['./button.component.css'],
 })
 export class ButtonComponent {
-
   @Output() clickButton = new EventEmitter<void>();
   @Input()
-    customClasses!: string;
-
+  customClasses!: string;
 }

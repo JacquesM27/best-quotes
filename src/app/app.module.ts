@@ -18,13 +18,10 @@ import { ListComponent } from './list/list.component';
     FormComponent,
     ButtonComponent,
     VotesButtonComponent,
-    ListComponent
+    ListComponent,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

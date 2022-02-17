@@ -4,10 +4,9 @@ import { Quotation } from '../models/quotation';
 @Component({
   selector: 'app-ranking',
   templateUrl: './ranking.component.html',
-  styleUrls: ['./ranking.component.css']
+  styleUrls: ['./ranking.component.css'],
 })
-export class RankingComponent{
-
+export class RankingComponent {
   @Input()
   quotes: Quotation[] | undefined;
 
